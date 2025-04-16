@@ -10,13 +10,14 @@ npm run dev
 ## Handy tools for browser
 
 [React Development Tools](https://react.dev/learn/react-developer-tools)
+
 [Redux DevTools](https://github.com/reduxjs/redux-devtools)
 
 ## Real good info about react!
 
-[ReactDev - Thinking in React](https://react.dev/learn/thinking-in-react)
-[ReactDev - React Hooks](https://react.dev/reference/react/hooks)
-[ReactDev - Reacting to input with state](https://react.dev/learn/reacting-to-input-with-state)
+ - [ReactDev - Thinking in React](https://react.dev/learn/thinking-in-react)
+ - [ReactDev - React Hooks](https://react.dev/reference/react/hooks)
+ - [ReactDev - Reacting to input with state](https://react.dev/learn/reacting-to-input-with-state)
 
 # Managing State - all about it:
 Firstly checkout [state structure](https://react.dev/learn/reacting-to-input-with-state)

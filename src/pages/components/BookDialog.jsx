@@ -11,7 +11,13 @@ import DialogContentText from '@mui/material/DialogContentText';
 
 const BookDialog = (props) => {
     const [isOpen, setIsOpen] = useState(false);
-    const [newBook, setNewBook] = useState({})
+    const [newBook, setNewBook] = useState({
+        id: 0,
+        bookTitle: '', 
+        bookAuthor: '', 
+        publishingYear: 2025, 
+        bookGenre: ''
+    })
     let editMode = props.editMode || false;
 
     useEffect(() => {
@@ -80,27 +86,14 @@ const BookDialog = (props) => {
                 </Button>)}
             </Grid>
             { isOpen && (
-                // <Dialog 
-                //     fullWidth
-                //     open={isOpen}
-                //     onClose={handleClose} 
-                //     aria-labelledby="customized-dialog-title"
-                //     // slotprops: The props used for each slot inside
-                //     slotProps={{
-                //         paper: {
-                //         component: 'form',
-                //         onSubmit: e => handleSave(e)
-                //         },
-                //     }}
-                // >
-                <Dialog 
-                    fullWidth
-                    open={isOpen}
-                    onClose={handleClose} 
-                    aria-labelledby="customized-dialog-title">
+            <Dialog 
+                fullWidth
+                open={isOpen}
+                onClose={handleClose} 
+                aria-labelledby="customized-dialog-title">
             { editMode ? ( <DialogTitle>Edit Mode</DialogTitle> ) :
             ( <DialogTitle>Add new book</DialogTitle> )}
-            <DialogContent>
+                <DialogContent>
                 { editMode ? 
                 ( <DialogContentText>
                     Edit current book
@@ -108,77 +101,59 @@ const BookDialog = (props) => {
                 ( <DialogContentText>
                     Add a new book and press Submit
                   </DialogContentText> )}
+                    <TextField
+                        autoFocus
+                        fullWidth
+                        required
+                        margin='dense'
+                        name='bookTitle'
+                        label='Book Title'
+                        type='text'
+                        variant='standard'
+                        value={newBook.bookTitle}
+                        onChange={e => setNewBook({ ...newBook, bookTitle: e.target.value })} />
 
-                {/* <TextField
-                    autoFocus
-                    required
-                    margin='dense'
-                    name='bookTitle'
-                    label='Book Title'
-                    type='text'
-                    variant='standard'
-                    value={newBook.bookTitle}
-                    onChange={handleChange}
-                /> */}
+                    <TextField
+                        autoFocus
+                        fullWidth
+                        required
+                        margin='dense'
+                        name='bookAuthor'
+                        label='Book Author'
+                        type='text'
+                        variant='standard'
+                        value={newBook.bookAuthor}
+                        onChange={e => setNewBook({ ...newBook, bookAuthor: e.target.value })} />
 
-                <TextField
-                    autoFocus
-                    fullWidth
-                    required
-                    margin='dense'
-                    name='bookTitle'
-                    label='Book Title'
-                    type='text'
-                    variant='standard'
-                    value={newBook.bookTitle}
-                    onChange={e => setNewBook({ ...newBook, bookTitle: e.target.value })}
-                />
+                    <TextField
+                        autoFocus
+                        fullWidth
+                        required
+                        margin='dense'
+                        name='publishingYear'
+                        label='Publishing year'
+                        type='number'
+                        variant='standard'
+                        value={newBook.publishingYear}
+                        onChange={e => setNewBook({ ...newBook, publishingYear: e.target.value })} />
 
-                <TextField
-                    autoFocus
-                    fullWidth
-                    required
-                    margin='dense'
-                    name='bookAuthor'
-                    label='Book Author'
-                    type='text'
-                    variant='standard'
-                    value={newBook.bookAuthor}
-                    onChange={e => setNewBook({ ...newBook, bookAuthor: e.target.value })}
-                />
-
-                <TextField
-                    autoFocus
-                    fullWidth
-                    required
-                    margin='dense'
-                    name='publishingYear'
-                    label='Publishing year'
-                    type='number'
-                    variant='standard'
-                    value={newBook.publishingYear}
-                    onChange={e => setNewBook({ ...newBook, publishingYear: e.target.value })}
-                />
-
-                <TextField
-                    autoFocus
-                    fullWidth
-                    required
-                    margin='dense'
-                    name='bookGenre'
-                    label='Genre'
-                    type='text'
-                    variant='standard'
-                    value={newBook.bookGenre}
-                    onChange={e => setNewBook({ ...newBook, bookGenre: e.target.value })}
-                />
+                    <TextField
+                        autoFocus
+                        fullWidth
+                        required
+                        margin='dense'
+                        name='bookGenre'
+                        label='Genre'
+                        type='text'
+                        variant='standard'
+                        value={newBook.bookGenre}
+                        onChange={e => setNewBook({ ...newBook, bookGenre: e.target.value })} />
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleClose}>Cancel</Button>
                     <Button onClick={handleSave}>Submit</Button>
                 </DialogActions>
-            </Dialog>
-            )}
+            </Dialog> )}
         </>
     );
 }

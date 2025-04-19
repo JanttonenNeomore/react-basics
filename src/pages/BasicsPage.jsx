@@ -20,9 +20,7 @@ const AlertMessage = ({ alert }) => {
         </Alert>
        )
     }
-    return (
-        <p>Should you press something?</p>
-    )
+    return null
 }
 
 const BasicsPage = () => {
@@ -52,36 +50,6 @@ const BasicsPage = () => {
         }
     }, [count])
 
-
-    /* =========================================================== */
-	/* ES6 features	                                	   		   */
-	/* =========================================================== */
-
-    /* 
-        Arrow functions:
-        oneFuntion: function(oneParam) {
-            do something with oneParam
-        }
-        ES6
-        const oneFunction = (oneParam) => {
-            do something with one param
-        }
-    
-        Template literals:
-        let param = 'Hello ' + userParam + ', good morning!'
-        ES6
-        let param = `Hello ${userParam}, good morning!`
-        
-        Object destructuring:
-        const person = {
-            firstName: 'Abby',
-            lastName: 'Wabby',
-            email: 'j.wabby@mail.com'
-        };
-        ES6
-        const { firstName, lastName, email } = person;
-    */
-
     // Batching - Component re-renders after all state updates
     const batchingMultipleStates = () => {
         setSecondButtonCount(secondButtonCount + 1);
@@ -105,6 +73,7 @@ const BasicsPage = () => {
                     justifyContent: 'space-between'
                 }}>
                 <h2>useState</h2>
+
                 {/* Typical button with a state */}
                 <Button onClick={() => setCount((count) => count + 1)}>
                     Button count {count}
@@ -117,7 +86,6 @@ const BasicsPage = () => {
                     <p>Counters: {secondButtonCount} {secondButtonCount2}    </p>
                     <Button onClick={batchingMultipleStates}>Batch</Button>
                 </Grid>
-            
             </Grid>
 
             {/* useEffect */}
@@ -131,12 +99,12 @@ const BasicsPage = () => {
                     justifyContent: 'space-between',
                 }}>
                 <h2>useEffect</h2>
+
                 {/* Initial load & conditional rendering */}
                 <IsLoaded isLoaded={isLoaded} />
                 <AlertMessage alert={alert} />
 
                 {/* Other way to do conditional rendering:
-                
                 { alert.visible ? (
                     <Alert severity="error" sx={{ mt: 2 }}>
                         {alert.message}
@@ -156,3 +124,32 @@ const BasicsPage = () => {
 }
 
 export default BasicsPage
+
+/* =========================================================== */
+/* ES6 features	                                	   		   */
+/* =========================================================== */
+
+/* 
+    Arrow functions:
+    oneFuntion: function(oneParam) {
+        do something with oneParam
+    }
+    ES6
+    const oneFunction = (oneParam) => {
+        do something with one param
+    }
+
+    Template literals:
+    let param = 'Hello ' + userParam + ', good morning!'
+    ES6
+    let param = `Hello ${userParam}, good morning!`
+    
+    Object destructuring:
+    const person = {
+        firstName: 'Abby',
+        lastName: 'Wabby',
+        email: 'j.wabby@mail.com'
+    };
+    ES6
+    const { firstName, lastName, email } = person;
+*/

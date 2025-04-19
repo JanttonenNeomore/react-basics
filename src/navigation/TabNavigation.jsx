@@ -25,12 +25,12 @@ const TabNavigation = () => {
             centered='true'
         >
             <Tab value='' label='Basics' />
+            <Tab value='bookshop' label='Bookshop' />
             <Tab value='todo' label='Todo' />
-            <Tab value='shoppingList' label='Bookshop' />
         </Tabs>
         { page === '' && <BasicsPage /> }
+        { page === 'bookshop' && <BookshopPage /> }
         { page === 'todo' && <TodoPage /> }
-        { page === 'shoppingList' && <BookshopPage /> }
     </>
   )
 }

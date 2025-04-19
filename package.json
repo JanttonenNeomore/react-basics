@@ -16,8 +16,9 @@
     "@mui/x-data-grid": "^7.28.3",
     "@reduxjs/toolkit": "^2.6.1",
     "axios": "^1.8.4",
-    "react": "^19.0.0",
+    "react": "^19.1.0",
     "react-dom": "^19.0.0",
+    "react-intl": "^7.1.10",
     "react-redux": "^9.2.0"
   },
   "devDependencies": {

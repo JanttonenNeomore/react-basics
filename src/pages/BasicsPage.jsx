@@ -124,32 +124,3 @@ const BasicsPage = () => {
 }
 
 export default BasicsPage
-
-/* =========================================================== */
-/* ES6 features	                                	   		   */
-/* =========================================================== */
-
-/* 
-    Arrow functions:
-    oneFuntion: function(oneParam) {
-        do something with oneParam
-    }
-    ES6
-    const oneFunction = (oneParam) => {
-        do something with one param
-    }
-
-    Template literals:
-    let param = 'Hello ' + userParam + ', good morning!'
-    ES6
-    let param = `Hello ${userParam}, good morning!`
-    
-    Object destructuring:
-    const person = {
-        firstName: 'Abby',
-        lastName: 'Wabby',
-        email: 'j.wabby@mail.com'
-    };
-    ES6
-    const { firstName, lastName, email } = person;
-*/

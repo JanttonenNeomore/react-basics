@@ -20,7 +20,7 @@ npm run dev
  - [Extracting State Logic into a Reducer](https://react.dev/learn/extracting-state-logic-into-a-reducer)
  - [Scaling Up with Reducer and Context](https://react.dev/learn/scaling-up-with-reducer-and-context)
 
-### ES6 features
+### Useful ES6 features
 #### Arrow functions
 ```shell
     oneFuntion: function(x) {
@@ -33,4 +33,25 @@ npm run dev
     }
 
     const oneFunction = x => x + x;
+```
+
+#### Template literals
+```shell
+    let sentence = 'Hello ' + userParam + ', good morning!'
+
+    // ES6
+    let sentence = `Hello ${userParam}, good morning!`
+```
+
+#### Object destructuring
+```shell
+    const newBook = {
+        bookTitle: 'Hunger Games',
+        bookAuthor: 'Suzane Collins',
+        publishingYear: 2008,
+        bookGenre: 'Dystopia' 
+    }
+
+    // ES6
+    const { bookTitle, bookAuthor, publishingYear, bookGenre } = newBook;
 ```

@@ -12,14 +12,25 @@ npm run dev
  - [React Development Tools](https://react.dev/learn/react-developer-tools)
  - [Redux DevTools](https://github.com/reduxjs/redux-devtools)
 
-### Real good info about react!
+### ReactDev - real good info!
 
- - [ReactDev - Thinking in React](https://react.dev/learn/thinking-in-react)
- - [ReactDev - React Hooks](https://react.dev/reference/react/hooks)
- - [ReactDev - Reacting to input with state](https://react.dev/learn/reacting-to-input-with-state)
+ - [Thinking in React](https://react.dev/learn/thinking-in-react)
+ - [State: A Component's Memory](https://react.dev/learn/state-a-components-memory)
+ - [Render and Commit](https://react.dev/learn/render-and-commit)
+ - [Extracting State Logic into a Reducer](https://react.dev/learn/extracting-state-logic-into-a-reducer)
+ - [Scaling Up with Reducer and Context](https://react.dev/learn/scaling-up-with-reducer-and-context)
 
-### Managing State - all about it:
-Firstly checkout [state structure](https://react.dev/learn/reacting-to-input-with-state)
-You should definetly checkout also [extracting state logic into reducer](https://react.dev/learn/extracting-state-logic-into-a-reducer) and then [Reducers and Context](https://react.dev/learn/scaling-up-with-reducer-and-context)
+### ES6 features
+#### Arrow functions
+```shell
+    oneFuntion: function(x) {
+        return x + x;
+    }
 
-EXP uses [Redux](https://react-redux.js.org/introduction/why-use-react-redux) to handle updating and retrieving states
+    // ES6
+    const oneFunction = (x) => {
+        return x + x;
+    }
+
+    const oneFunction = x => x + x;
+```

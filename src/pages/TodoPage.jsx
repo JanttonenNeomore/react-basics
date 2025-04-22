@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import Grid from '@mui/material/Grid';
-import TextField from '@mui/material/TextField';
-import TodoDialog from './components/TodoDialog';
+// import TodoDialog from './components/TodoDialog';
+import {
+  Grid,
+  TextField
+} from '@mui/material';
 
 const TodoPage = () => {
     const [text, setText] = useState('')
     // const [newTodo, setNewTodo] = useState('')
 
-    // const handleTodoSubmit = (newTodo) => {
-    //     setNewTodo(newTodo)
-    // }
-
+    // TODO: 
+    // Create function to add as a prop to dialog
 
     return (
         <>
@@ -40,9 +40,8 @@ const TodoPage = () => {
                 />
                 {/* 
                     TODO:
-                    Add props to dialog
+                    Add dialog and props to dialog
                 */}
-                <TodoDialog />
             </Grid>
           </Grid>
         </>

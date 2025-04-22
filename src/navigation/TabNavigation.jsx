@@ -1,6 +1,8 @@
 import { useState } from 'react'
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
+import {
+  Tabs,
+  Tab
+} from '@mui/material';
 
 // Pages
 import BasicsPage from '../pages/BasicsPage';

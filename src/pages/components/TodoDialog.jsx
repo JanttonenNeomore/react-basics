@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import Grid from '@mui/material/Grid';
-import Dialog from '@mui/material/Dialog';
-import DialogTitle from '@mui/material/DialogTitle';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
+import {
+    Button,
+    TextField,
+    Grid,
+    Dialog,
+    DialogTitle,
+    DialogActions,
+    DialogContent
+} from '@mui/material';
 
 const TodoDialog = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -17,6 +19,11 @@ const TodoDialog = () => {
   
     const handleClose = () => {
         setIsOpen(false);
+    };
+
+    const handleTodoSubmit = (newText) => {
+        console.log(newText);
+        // TODO 
     };
 
     return (
@@ -49,10 +56,7 @@ const TodoDialog = () => {
                     </DialogContent>
                     <DialogActions>
                         <Button onClick={handleClose}>Cancel</Button>
-                        {/* 
-                        TODO: we would like to use parent components function here
                         <Button onClick={handleTodoSubmit}>Submit</Button> 
-                        */}
                     </DialogActions>
                 </Dialog>
             )}

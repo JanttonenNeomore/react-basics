@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
-import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
-import Alert from '@mui/material/Alert';
+import {
+    Button,
+    Grid,
+    Alert
+} from '@mui/material';
 
 // Conditional rendering
 // Creating component outside of the main component

@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import Grid from '@mui/material/Grid';
-import Dialog from '@mui/material/Dialog';
-import DialogTitle from '@mui/material/DialogTitle';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
+import {
+    Button,
+    TextField,
+    Grid,
+    Dialog,
+    DialogTitle,
+    DialogActions,
+    DialogContent,
+    DialogContentText
+} from '@mui/material';
 
 const BookDialog = (props) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -60,7 +62,6 @@ const BookDialog = (props) => {
         handleClose();
     };
 
-
     // You can also just use function to handle input change
     // const handleChange = (event) => {
     //     setNewBook({...newBook, [event.target.name]: event.target.value});
@@ -77,13 +78,9 @@ const BookDialog = (props) => {
                     flexDirection: 'column',
                     justifyContent: 'space-between',
                 }}>
-            { editMode ? 
-                (<Button variant="outlined" onClick={handleClickOpen}>
-                    Edit
-                </Button> ) :             
-                (<Button variant="outlined" onClick={handleClickOpen}>
-                    Open simple dialog
-                </Button>)}
+                <Button variant="outlined" onClick={handleClickOpen}>
+                    { editMode ? 'Edit' : 'Open simple dialog'}
+                </Button>           
             </Grid>
             { isOpen && (
             <Dialog 
@@ -91,16 +88,13 @@ const BookDialog = (props) => {
                 open={isOpen}
                 onClose={handleClose} 
                 aria-labelledby="customized-dialog-title">
-            { editMode ? ( <DialogTitle>Edit Mode</DialogTitle> ) :
-            ( <DialogTitle>Add new book</DialogTitle> )}
+                <DialogTitle>
+                    { editMode ? 'Edit book' : 'Add new book' }
+                </DialogTitle>
                 <DialogContent>
-                { editMode ? 
-                ( <DialogContentText>
-                    Edit current book
-                  </DialogContentText> ) : 
-                ( <DialogContentText>
-                    Add a new book and press Submit
-                  </DialogContentText> )}
+                    <DialogContentText>
+                        { editMode ? 'Edit current book' : 'Add a new book and press Submit' }
+                    </DialogContentText>
                     <TextField
                         autoFocus
                         fullWidth

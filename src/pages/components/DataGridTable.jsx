@@ -14,7 +14,11 @@ const DataGridTable = (props) => {
           headerName: 'Edit book',
           width: 300,
           renderCell: (params) => (
-            <BookDialog bookList={props.bookList} editBook={params.row} editMode={true} saveEditedBook={props.saveEditedBook}/>
+            <BookDialog 
+              bookList={props.bookList} 
+              editBook={params.row} 
+              editMode={true} 
+              saveEditedBook={props.saveEditedBook} />
           )
         },
     ]);
@@ -32,8 +36,7 @@ const DataGridTable = (props) => {
               },
             }}
             pageSizeOptions={[5]}
-            checkboxSelection
-            disableRowSelectionOnClick
+            disableRowSelectionOnClick='true'
           />
         </Grid>
       );
